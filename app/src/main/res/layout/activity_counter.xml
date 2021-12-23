@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/zekr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/zekr"
+        android:layout_below="@id/toolbar"
+        android:padding="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv_arabic"
+        android:layout_below="@id/zekr"
+        android:layout_margin="10dp"
+        style="@style/cv">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:id="@+id/tv_arabic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/farsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/farsi"
+        android:layout_below="@id/cv_arabic"
+        android:padding="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv_farsi"
+        android:layout_below="@id/farsi"
+        style="@style/cv">
+
+        <TextView
+            android:id="@+id/tv_farsi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <include layout="@layout/counter_raw"
+        android:id="@+id/counter_raw"
+        android:layout_below="@id/cv_farsi"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        app:cardBackgroundColor="@color/red_900"
+        android:id="@+id/cv_add">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_increase"
+            android:layout_margin="40dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            app:tint="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_caption"
+        android:layout_above="@id/cv_add"
+        style="@style/TextAppearance.AppCompat.Caption"/>
+
+
+</RelativeLayout>

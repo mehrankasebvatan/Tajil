@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">تعجیل</string>
+    <string name="empty_counter">شمارنده شخصی</string>
+    <string name="week">ذکر ایام هفته</string>
+    <string name="zekr">ذکر :</string>
+    <string name="farsi">معنی فارسی :</string>
+    <string name="saturday">شنبه</string>
+    <string name="sunday">یکشنبه</string>
+    <string name="monday">دوشنبه</string>
+    <string name="tuesday">سه شنبه</string>
+    <string name="wednesday">چهارشنبه</string>
+    <string name="thursday">پنجشنبه</string>
+    <string name="friday">جمعه</string>
+    <string name="about">درباره برنامه</string>
+    <string name="salavat">صلوات</string>
+    <string name="add_caption">به ازای هر بار قرائت ذکر، یکبار روی دکمه پایین بزنید</string>
+    <string name="saturday_arabic">یا رَبِّ الْعالَمِین</string>
+    <string name="saturday_farsi">ای پروردگار جهانیان</string>
+    <string name="sunday_arabic">یا ذَالجَلالِ وَ اْلاِکْرام</string>
+    <string name="sunday_farsi">ای صاحب شکوه و بزرگواری</string>
+    <string name="monday_arabic">یا قاضیَ الحاجات</string>
+    <string name="monday_farsi">ای برآورنده حاجت ها</string>
+    <string name="tuesday_arabic">یا أَرْحَمَ الرَّاحِمِین</string>
+    <string name="tuesday_farsi">ای مهربان‌ترین مهربانان</string>
+    <string name="wednesday_arabic">یا حَیُّ یا قَیّومُ</string>
+    <string name="wednesday_farsi">ای زنده،‌ ای پاینده</string>
+    <string name="thursday_arabic">لا إِلهَ إِلَّا اللَّهُ المَلِک الحقّ المُبین</string>
+    <string name="thursday_farsi">نیست خدایی جز الله فرمانروای حق و آشکار</string>
+    <string name="friday_arabic">اَللّهُمَّ صَلِّ عَلی مُحَمَّدٍ وَ آلِ مُحَمَّدٍ وَ عَجِّلْ فَرَجَهُمْ</string>
+    <string name="friday_farsi">خدایا بر محمد و آل محمد درود فرست و در فرج ایشان تعجیل فرما</string>
+    <string name="salavat_arabic">اَللّهُمَّ صَلِّ عَلی مُحَمَّدٍ وَ آلِ مُحَمَّدٍ وَ عَجِّلْ فَرَجَهُمْ</string>
+    <string name="salavat_farsi">خدایا بر محمد و آل محمد درود فرست و در فرج ایشان تعجیل فرما</string>
+    <string name="day">ذکر روز :</string>
+    <string name="empty_error">مقدار نمیتواند کمتر از صفر باشد</string>
+    <string name="version">نسخه: 1.0.0</string>
+    <string name="developer">توسعه دهنده: مهران کاسب وطن</string>
+    <string name="telegram">تلگرام</string>
+    <string name="instagram">اینستاگرام</string>
+    <string name="site">سایت</string>
+    <string name="github">گیتهاب</string>
+    <string name="rate">امتیاز به برنامه</string>
+    <string name="apps">سایر برنامه ها</string>
+    <string name="info">
+                تعجیل، رایگان هست و رایگان خواهد ماند. \nدر صورتی که از این برنامه استفاده میکنید و رضایت دارید، می توانید از توسعه دهنده حمایت مالی انجام دهید. با کلیک روی دکمه پایین به درگاه پرداخت امن هدایت می شوید. \nممنون :)
+
+    </string>
+    <string name="donate">حمایت مالی</string>
+    <string name="license">
+                ابن برنامه تحت لایسنس GNU GENERAL PUBLIC LICENSE Version 3 منتشر شده است. \nاستفاده شخصی جهت آموزش آزاد است ولی هر گونه بهره برداری مادی و همچنین انتشار آن در سایر مارکت های ایرانی و غیر ایرانی بدون اجاره توسعه دهنده مجاز نیست.\nزمستان 1400
+
+    </string>
+
+</resources>
