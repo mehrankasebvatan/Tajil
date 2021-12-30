@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
     <include
         android:id="@+id/toolbar"
-        android:layout_alignParentTop="true"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_margin="10dp" />
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_below="@id/toolbar"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
         android:scrollbars="none">
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -25,7 +25,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:context=".activities.InfoActivity">
-
 
 
             <TextView
@@ -202,10 +201,10 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_donate"
                 style="@style/cv"
-                app:cardBackgroundColor="@color/red_900"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/red_900">
 
                 <TextView
                     style="@style/TextAppearance.AppCompat.Title"

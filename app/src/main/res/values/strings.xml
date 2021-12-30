@@ -12,7 +12,6 @@
     <string name="thursday">پنجشنبه</string>
     <string name="friday">جمعه</string>
     <string name="about">درباره برنامه</string>
-    <string name="salavat">صلوات</string>
     <string name="add_caption">به ازای هر بار قرائت ذکر، یکبار روی دکمه پایین بزنید</string>
     <string name="saturday_arabic">یا رَبِّ الْعالَمِین</string>
     <string name="saturday_farsi">ای پروردگار جهانیان</string>
@@ -28,11 +27,9 @@
     <string name="thursday_farsi">نیست خدایی جز الله فرمانروای حق و آشکار</string>
     <string name="friday_arabic">اَللّهُمَّ صَلِّ عَلی مُحَمَّدٍ وَ آلِ مُحَمَّدٍ وَ عَجِّلْ فَرَجَهُمْ</string>
     <string name="friday_farsi">خدایا بر محمد و آل محمد درود فرست و در فرج ایشان تعجیل فرما</string>
-    <string name="salavat_arabic">اَللّهُمَّ صَلِّ عَلی مُحَمَّدٍ وَ آلِ مُحَمَّدٍ وَ عَجِّلْ فَرَجَهُمْ</string>
-    <string name="salavat_farsi">خدایا بر محمد و آل محمد درود فرست و در فرج ایشان تعجیل فرما</string>
     <string name="day">ذکر روز :</string>
     <string name="empty_error">مقدار نمیتواند کمتر از صفر باشد</string>
-    <string name="version">نسخه: 1.0.0</string>
+    <string name="version">نسخه: 1.1</string>
     <string name="developer">توسعه دهنده: مهران کاسب وطن</string>
     <string name="telegram">تلگرام</string>
     <string name="instagram">اینستاگرام</string>
@@ -49,5 +46,6 @@
                 ابن برنامه تحت لایسنس GNU GENERAL PUBLIC LICENSE Version 3 منتشر شده است. \nاستفاده شخصی جهت آموزش آزاد است ولی هر گونه بهره برداری مادی و همچنین انتشار آن در سایر مارکت های ایرانی و غیر ایرانی بدون اجاره توسعه دهنده مجاز نیست.\nزمستان 1400
 
     </string>
+    <string name="reset_message">شمارنده صفر شد</string>
 
 </resources>

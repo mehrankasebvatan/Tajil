@@ -1,7 +1,10 @@
 package app.tajil;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,6 +13,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.adivery.sdk.AdiveryAdListener;
+import com.adivery.sdk.AdiveryBannerAdView;
 import com.valdesekamdem.library.mdtoast.MDToast;
 
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
@@ -19,12 +24,19 @@ public class CounterActivity extends AppCompatActivity {
     TextView toolbar, tv_arabic, tv_farsi, zekr, farsi, tv_counter, tv_subtitle;
     ImageView img1, img_reset, img_decrease;
     CardView add;
+    Vibrator myVibrator;
     int count = 0;
+    String APP_ID = "aebe62d0-b254-4cc8-8fd2-4271ce207864";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counter);
+
+        showAdd();
+
+        myVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         toolbar = findViewById(R.id.tv_title);
         img1 = findViewById(R.id.img1);
@@ -49,12 +61,29 @@ public class CounterActivity extends AppCompatActivity {
             count++;
             tv_counter.setText(count + "");
 
+            if (Build.VERSION.SDK_INT >= 26) {
+                myVibrator.vibrate(VibrationEffect.createOneShot(150, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                myVibrator.vibrate(150);
+            }
+
 
         });
 
         img_reset.setOnClickListener(view -> {
             count = 0;
             tv_counter.setText(count + "");
+
+            MDToast mdToast = MDToast.makeText(CounterActivity.this, getApplicationContext().getResources().
+                    getString(R.string.reset_message), MDToast.LENGTH_SHORT, MDToast.TYPE_SUCCESS);
+            mdToast.setGravity(Gravity.TOP, 0, 200);
+            mdToast.show();
+
+            if (Build.VERSION.SDK_INT >= 26) {
+                myVibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                myVibrator.vibrate(500);
+            }
         });
 
         img_decrease.setOnClickListener(view -> {
@@ -62,6 +91,13 @@ public class CounterActivity extends AppCompatActivity {
             if (count != 0) {
                 count--;
                 tv_counter.setText(count + "");
+
+                if (Build.VERSION.SDK_INT >= 26) {
+                    myVibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
+                } else {
+                    myVibrator.vibrate(300);
+                }
+
             } else {
 
                 MDToast mdToast = MDToast.makeText(CounterActivity.this, getApplicationContext().getResources().
@@ -128,11 +164,6 @@ public class CounterActivity extends AppCompatActivity {
             tv_farsi.setText(R.string.friday_farsi);
         }
 
-        if (bundle.containsKey("salavat")) {
-            toolbar.setText(R.string.salavat);
-            tv_arabic.setText(R.string.salavat_arabic);
-            tv_farsi.setText(R.string.salavat_farsi);
-        }
 
 
     }
@@ -146,5 +177,29 @@ public class CounterActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+    }
+
+    public void showAdd() {
+        AdiveryBannerAdView bannerAd = findViewById(R.id.banner_ad);
+
+        bannerAd.setBannerAdListener(new AdiveryAdListener() {
+            @Override
+            public void onAdLoaded() {
+                // تبلیغ به‌طور خودکار نمایش داده می‌شود، هر کار دیگری لازم است اینجا انجام دهید.
+            }
+
+            @Override
+            public void onError(String reason) {
+                // خطا را چاپ کنید تا از دلیل آن مطلع شوید
+            }
+
+            @Override
+            public void onAdClicked() {
+                // کاربر روی بنر کلیک کرده
+            }
+        });
+
+        bannerAd.loadAd();
+
     }
 }

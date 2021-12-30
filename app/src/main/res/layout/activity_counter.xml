@@ -65,14 +65,15 @@
     </androidx.cardview.widget.CardView>
 
 
-    <include layout="@layout/counter_raw"
+    <include
         android:id="@+id/counter_raw"
+        layout="@layout/counter_raw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/cv_farsi"
-        android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
+        android:layout_marginRight="20dp" />
 
 
 
@@ -97,11 +98,22 @@
     <TextView
         android:layout_width="match_parent"
         android:gravity="center"
+        android:id="@+id/caption"
         android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:text="@string/add_caption"
         android:layout_above="@id/cv_add"
         style="@style/TextAppearance.AppCompat.Caption"/>
+
+    <com.adivery.sdk.AdiveryBannerAdView
+        android:layout_above="@id/caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/counter_raw"
+        android:id="@+id/banner_ad"
+        app:placement_id="06aee852-53bd-4b41-964f-6dc063852b1c"
+        app:banner_size="smart_banner"/>
+
 
 
 </RelativeLayout>
